@@ -14,11 +14,10 @@ winsNumber.textContent = gameStatistic.win;
 losesNumber.textContent = gameStatistic.lose;
 rollBtn.addEventListener("click", (event) => {
     event.preventDefault()
-    if (bidField.value > wallet.getMoney()) alert("Masz za mało pieniędzy");
-    else if (bidField.value === ("")) alert("Nie podałeś stawki");
-    else if (bidField.value === ("0")) alert("Podaj innę stawkę");
+    if (bidField.value > wallet.getMoney()) alert("Not enough money");
+    else if (bidField.value === ("")) alert("You did not enter the rate");
+    else if (bidField.value === ("0")) alert("Enter another rate");
     else {
-        console.log(`Postawiłeś ${bidField.value}$`)
         const draw = new Draw();
         wallet.takeBid(bidField.value);
         const win = draw.Random(boxes);
@@ -28,7 +27,7 @@ rollBtn.addEventListener("click", (event) => {
         gamesNumber.textContent = gameStatistic.games;
         winsNumber.textContent = gameStatistic.win;
         losesNumber.textContent = gameStatistic.lose;
-        thisGame.textContent = (`Postawiłeś ${bidField.value}$, ${win?`Wygrałeś `:`Przegrałeś `}${win?bidField.value*3:bidField.value}$`)
+        thisGame.textContent = (`${win?`WON: `:`LOST: `}${win?bidField.value*3:bidField.value}$`)
         bidField.value = ("");
     }
 })
