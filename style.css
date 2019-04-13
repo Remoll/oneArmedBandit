@@ -3,28 +3,27 @@
     padding: 0;
 }
 
-body {
+.wrapper {
+    width: 100vw;
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: 'Fascinate Inline', cursive;
 }
 
 .header {
     text-align: center;
-    margin: 50px auto;
+    margin: 30px auto;
     color: #000;
-    background-color: #ccc;
-    text-transform: uppercase;
 }
 
 .boxes {
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: space-around;
-    margin: 30px 0;
 }
 
 .boxes div {
@@ -33,30 +32,41 @@ body {
     height: 30vh;
 }
 
+
 .spin {
     display: flex;
-    flex-direction: column;
+    margin: 30px 0;
 }
 
+
 .spin input {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
+    line-height: 200%;
     text-align: center;
-    padding: 10px 50px;
     background-color: #fff;
     border: 2px solid #000;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .spin button {
-    padding: 15px 30px;
-    margin: 30px 0;
     font-size: 30px;
     color: #fff;
-    background-color: #333;
+    background-color: #000;
+    padding: 0 10px;
     border: none;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+/* 
+.thisGame {
+    margin-bottom: 10px;
 }
 
 .state {
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
+
+@media (min-width: 900px) {}
+
+@media (min-height: 725px) {} */
