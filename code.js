@@ -27,7 +27,7 @@ rollBtn.addEventListener("click", (event) => {
         gamesNumber.textContent = gameStatistic.games;
         winsNumber.textContent = gameStatistic.win;
         losesNumber.textContent = gameStatistic.lose;
-        thisGame.textContent = (`${win?`WON: `:`LOST: `}${win?bidField.value*3:bidField.value}$`)
+        thisGame.textContent = (`${win?`WON: `+bidField.value*3:`LOST: `+bidField.value}`);
         bidField.value = ("");
     }
 })
